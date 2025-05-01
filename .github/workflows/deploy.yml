@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build
+        run: npx @angular/cli build --base-href /my-amazing-app/
 
       - name: Artifact upload
         uses: actions/upload-pages-artifact@v3
@@ -32,9 +32,6 @@ jobs:
           name: github-pages
           path: dist/my-amazing-app/browser
 
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4
   deploy:
     needs: build
     runs-on: ubuntu-latest
