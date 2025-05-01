@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Artifact upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           path: dist/my-amazing-app/browser
 
