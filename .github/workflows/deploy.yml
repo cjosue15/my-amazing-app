@@ -29,7 +29,6 @@ jobs:
       - name: Artifact upload
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifact
           path: dist/my-amazing-app/browser
 
       # - name: Deploy to GitHub Pages
